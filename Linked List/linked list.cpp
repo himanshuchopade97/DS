@@ -71,6 +71,41 @@ void list::insert_at_beg()
     newnode->next=listptr;
     listptr=newnode;
 }
+void list::insert_at_inter()
+{
+    int val,pos;
+    cout<<"Enter position after which you want to insert new element :";
+    cin>>pos;
+
+    cout<<"Enter value to be inserted at intermediate position :";
+    cin>>val;
+    node *newnode =new node;
+    newnode->data=val;
+    temp=listptr;
+    int i=0;
+    while (i<pos-1)
+    {
+        temp=temp->next;
+        i++;
+    }
+    newnode->next=temp->next;
+    temp->next=newnode;
+}
+void list::insert_at_end()
+{
+    int val;
+    cout<<"Enter value to be inserted at the end of list: ";
+    cin>>val;
+    node *newnode =new node;
+    newnode->next=NULL;
+    newnode->data=val;
+    temp=listptr;
+    while (temp->next!=NULL)
+    {
+        temp=temp->next;
+    }
+    temp->next=newnode;
+}
 
 int main()
 {
