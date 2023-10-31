@@ -20,8 +20,7 @@ class tree
         void preorder(node *root);
         void postorder(node *root);
         int search (node *root,int val);
-        void deletenode (node *root,int num);
-
+        void deletenode (node *root,int num);   
 };
 void tree::create()
 {
@@ -181,65 +180,65 @@ void tree::deletenode(node *root, int num)
 }
 
 
-int main()
-{
-    tree t;
-    int choice;
-
-    do 
+    int main()
     {
-        cout<<"---------MENU---------"<<endl;
-        cout<<"1. Create a tree"<<endl;
-        cout<<"2. In-Order Tranversal"<<endl;
-        cout<<"3. Pre-Order Tranversal"<<endl;
-        cout<<"4. Post-Order Tranversal"<<endl;
-        cout<<"5. Search an element"<<endl;
-        cout<<"6. Delete a node"<<endl; 
-        cout<<"0. Exit"<<endl;
-        cout<<"Enter your choice :";
-        cin>>choice;
-        switch (choice)
+        tree t;
+        int choice;
+
+        do 
         {
-            case 1:
-                t.create();
-                break;
-            case 2:
-                cout<<"In-Order Traversal :";
-                t.inorder(t.root);
-                cout<<endl;
-                break;
-            case 3: 
-                cout<<"Pre-Order Traversal :";
-                t.preorder(t.root);
-                cout<<endl;
-                break;    
-            case 4:
-                cout<<"Post-Order Traversal :";
-                t.postorder(t.root);
-                cout<<endl;
-                break;
-            case 5:
-                int val;
-                cout<<"Enter value to be searched :";
-                cin>>val;
-                int out;
-                out=t.search(t.root,val);
-                if (out==1)
-                    cout<<"Element found in tree"<<endl;
-                else if (out==0){
-                    cout<<"Element not found in tree"<<endl;
-                }
-                break;
-            case 6:
-                int num;
-                cout<<"Enter value to be deleted: ";
-                cin >> num;
-                t.deletenode(t.root, num);
-                break;
-            case 0:
-                cout<<"Exiting..."<<endl;
-                break;           
+            cout<<"---------MENU---------"<<endl;
+            cout<<"1. Create a tree"<<endl;
+            cout<<"2. In-Order Tranversal"<<endl;
+            cout<<"3. Pre-Order Tranversal"<<endl;
+            cout<<"4. Post-Order Tranversal"<<endl;
+            cout<<"5. Search an element"<<endl;
+            cout<<"6. Delete a node"<<endl; 
+            cout<<"0. Exit"<<endl;
+            cout<<"Enter your choice :";
+            cin>>choice;
+            switch (choice)
+            {
+                case 1:
+                    t.create();
+                    break;
+                case 2:
+                    cout<<"In-Order Traversal :";
+                    t.inorder(t.root);
+                    cout<<endl;
+                    break;
+                case 3: 
+                    cout<<"Pre-Order Traversal :";
+                    t.preorder(t.root);
+                    cout<<endl;
+                    break;    
+                case 4:
+                    cout<<"Post-Order Traversal :";
+                    t.postorder(t.root);
+                    cout<<endl;
+                    break;
+                case 5:
+                    int val;
+                    cout<<"Enter value to be searched :";
+                    cin>>val;
+                    int out;
+                    out=t.search(t.root,val);
+                    if (out==1)
+                        cout<<"Element found in tree"<<endl;
+                    else if (out==0){
+                        cout<<"Element not found in tree"<<endl;
+                    }
+                    break;
+                case 6:
+                    int num;
+                    cout<<"Enter value to be deleted: ";
+                    cin >> num;
+                    t.deletenode(t.root, num);
+                    break;
+                case 0:
+                    cout<<"Exiting..."<<endl;
+                    break;           
+            }
         }
+        while (choice!=0);
     }
-    while (choice!=0);
-}
