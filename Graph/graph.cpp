@@ -114,7 +114,7 @@ void listgraph::matrix_display()
     }
 }
 
-int main()
+int main()          
 {
     listgraph l(3);
     l.create();
