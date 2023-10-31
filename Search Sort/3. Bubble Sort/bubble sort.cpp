@@ -1,7 +1,6 @@
-//bubble sort
 #include <iostream>
 using namespace std;
-void bubble_sort(int arr[],int size)
+int bubbleSort(int arr[],int size)
 {
     for (int i=0;i<size;i++)
     {
@@ -33,7 +32,7 @@ int main()
     {
         cout<<arr[i]<<" ";
     }
-    bubble_sort(arr,size);
+    bubbleSort(arr,size);
     cout<<"\nArray after sorting :";
     for (int i=0;i<size;i++)
     {
