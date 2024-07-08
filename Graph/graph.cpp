@@ -39,7 +39,6 @@ class listgraph
         void list_display();
         void rec_dfs(int v);
         void matrix_display();
-
 };
 void listgraph::create()
 {
@@ -103,7 +102,7 @@ void listgraph::rec_dfs(int v)
 }
 void listgraph::matrix_display()
 {
-    cout<<"Adjacency Matrix :"<<endl;
+    cout<<"\nAdjacency Matrix :"<<endl;
     for (int i=0;i<n;i++)
     {
         for (int j=0;j<n;j++)
